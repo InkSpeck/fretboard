@@ -1,0 +1,44 @@
+body
+  font: 14px/1 Helvetica
+
+table
+  border-collapse: collapse
+
+  tr
+    &#fret_numbers
+      td
+        border-width: 0
+        color: #999
+        font-size: 16px
+        letter-spacing: 0px
+
+  td
+    width: 70px
+    padding: 5px 0
+    text-align: center
+    border: 1px solid #DDD
+    letter-spacing: -2px
+
+    &[data-whole="true"]
+      font-weight: bold
+    &[data-marked="true"], &.marked
+      background: #FFFF99
+
+a
+  text-decoration: none
+  color: crimson
+
+ul.chords
+  padding: 0
+
+  li
+    display: inline-block
+    padding: 10px
+    border: 1px solid #DDD
+    margin-right: 2px
+    border-radius: 3px
+
+    a
+      height: 100%
+      width: 100%
+

@@ -1,0 +1,23 @@
+table
+  - @fret_board.strings.each do |s|
+    tr
+      - s.notes.each do |n|
+        td(data-note=n.note data-whole="#{n.whole?}" data-marked="#{n.marked}" data-pentatonic="#{n.pentatonic?}")
+            span.note= n.note.html_safe
+
+  tr#fret_numbers
+    - frets.each do |f|
+      td= f.html_safe
+
+
+ul#links
+  li= link_to "Toggle Whole Notes", "#", id: "toggleWholeNotes"
+  li= link_to "Toggle Sharp and Flat Notes", "#", id: "toggleSharpsAndFlats"
+  li= link_to "Toggle Pentatonic Scale", "#", id: "togglePentatonicScale"
+
+
+h4 Chords
+ul.chords
+  - ("A".."G").each do |note|
+    = link_to "#", id: "#{note}-chord" do
+      li= note
